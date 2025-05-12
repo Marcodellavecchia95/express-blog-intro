@@ -3,7 +3,39 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Server del mio Blog");
+  const posts = [
+    {
+      title: "",
+      content: "",
+      image: "",
+      tags: ["", "", ""],
+    },
+    {
+      title: "",
+      content: "",
+      image: "",
+      tags: ["", "", ""],
+    },
+    {
+      title: "",
+      content: "",
+      image: "",
+      tags: ["", "", ""],
+    },
+    {
+      title: "",
+      content: "",
+      image: "",
+      tags: ["", "", ""],
+    },
+    {
+      title: "",
+      content: "",
+      image: "",
+      tags: ["", "", ""],
+    },
+  ];
+  res.send(posts);
 });
 
 app.listen(port, () => {
