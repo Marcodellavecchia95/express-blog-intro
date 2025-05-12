@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.send("Server del mio blog");
 });
@@ -9,33 +11,33 @@ app.get("/", (req, res) => {
 app.get("/bacheca", (req, res) => {
   const posts = [
     {
-      title: "",
+      title: "Ciambellone",
       content: "",
-      image: "",
+      image: "/img/ciambellone.jpeg",
       tags: ["", "", ""],
     },
     {
-      title: "",
+      title: "Cracker alla barbabietola",
       content: "",
-      image: "",
+      image: "/img/cracker_barbabietola.jpeg",
       tags: ["", "", ""],
     },
     {
-      title: "",
+      title: "Pane fritto dolce",
       content: "",
-      image: "",
+      image: "/img/pane_fritto_dolce",
       tags: ["", "", ""],
     },
     {
-      title: "",
+      title: "Pasta alla barbabietola",
       content: "",
-      image: "",
+      image: "/img/pasta_barbabietola.jpeg",
       tags: ["", "", ""],
     },
     {
-      title: "",
+      title: "Torta paesana",
       content: "",
-      image: "",
+      image: "/img/torta_paesana.jpeg",
       tags: ["", "", ""],
     },
   ];
