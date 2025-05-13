@@ -18,4 +18,27 @@ router.get("/:id", (req, res) => {
   });
 });
 
+// STORE
+router.post("/", (req, res) => {
+  res.json({
+    description: "Creazione di un nuovo elemento",
+  });
+});
+
+// UPDATE
+router.put("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  res.json({
+    description: `Modifica dell'elemento ${id}`,
+  });
+});
+
+// MODIFY
+router.patch("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  res.json({
+    description: `Modifica parziale dell'elemento ${id}`,
+  });
+});
+
 module.exports = router;
