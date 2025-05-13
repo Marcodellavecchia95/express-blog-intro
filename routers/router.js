@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { bacheca } = require("../bacheca");
+const { posts } = require("../posts/posts");
 // INDEX
 router.get("/", (req, res) => {
   res.json({
     description: "Ecco la lista degli elementi",
-    data: bacheca,
+    data: posts,
   });
 });
 
