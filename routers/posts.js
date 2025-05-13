@@ -41,4 +41,12 @@ router.patch("/:id", (req, res) => {
   });
 });
 
+// DESTROY
+router.delete("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  res.json({
+    description: `Cancellazione dell'elemento ${id}`,
+  });
+});
+
 module.exports = router;
