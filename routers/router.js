@@ -12,9 +12,10 @@ router.get("/", (req, res) => {
 // SHOW
 router.get("/:id", (req, res) => {
   const id = parseInt(req.params.id);
+  const post = posts.find((currentPost) => currentPost.id === id);
   res.json({
-    description: "Ecco l'id dell'elemento cercato",
-    data: id,
+    description: `${post.title}`,
+    data: post,
   });
 });
 
