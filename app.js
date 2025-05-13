@@ -1,18 +1,14 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const { posts } = require("./function");
+const appUrl = `http://localhost:${port}`;
+const { bacheca } = require("./bacheca");
+const postsRouter = require("./routers/posts");
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.send("Server del mio blog");
-});
-
-app.get("/bacheca", (req, res) => {
-  res.json(posts());
-});
+app.use("/posts", postsRouter);
 
 app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+  console.log(`Server listening on ${appUrl}`);
 });
